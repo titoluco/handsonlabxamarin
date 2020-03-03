@@ -19,6 +19,7 @@ namespace MonkeyFinder.View
             await Navigation.PushAsync(new DetailsPage(monkey));
 
             ((ListView)sender).SelectedItem = null;
+
         }
     }
 }
