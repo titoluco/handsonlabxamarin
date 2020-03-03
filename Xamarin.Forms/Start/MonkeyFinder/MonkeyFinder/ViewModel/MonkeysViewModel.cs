@@ -14,9 +14,19 @@ namespace MonkeyFinder.ViewModel
 {
     public class MonkeysViewModel : BaseViewModel
     {
- 
+
+        public ObservableCollection<Monkey> Monkeys { get; }
         public MonkeysViewModel()
         {
-        }        
+            Title = "Monkey Finder";
+            Monkeys = new ObservableCollection<Monkey>();
+        }
+
+        HttpClient httpClient;
+        HttpClient Client => httpClient ?? (httpClient = new HttpClient());
+
+        async Task GetMonkeysAsync()
+        {
+        }
     }
 }
